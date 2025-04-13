@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="aboutme.html">About me</a>
+        <a href="skills.html">Skills</a>
+        <a href="myprof.html">My Profjects</a>
+    </nav>
+    </header>
+    <section class="home">
+        
+        <div class="home-content">
+            <h1> <span>My Skills</span></h1>
+            <div class="skills-area">
+                <div class="skill">
+                    <div class="skill-title">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 35%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-title">PHP</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const skillFills = document.querySelectorAll('.skill-fill');
+            
+            skillFills.forEach(skillFill => {
+                const width = skillFill.style.width; 
+                skillFill.style.width = '0%'; 
+                setTimeout(() => {
+                    skillFill.style.width = width; 
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
